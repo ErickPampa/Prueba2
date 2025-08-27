@@ -1,0 +1,72 @@
+/* pedidos-styles.css */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f3f6f8;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    background-color: #FE6960;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Para contener todos los elementos internos */
+}
+
+h2 {
+    background-color: #FE6960;
+    color: white;
+    padding: 10px;
+    margin-top: 0; /* Evitar el espacio superior */
+    margin-bottom: 20px; /* Espacio inferior */
+    border-radius: 5px 5px 0 0; /* Redondear solo arriba */
+    text-align: center; /* Centrar el texto */
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+input[type="text"], input[type="date"], input[type="submit"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+input[type="submit"] {
+    background-color: #FE6960;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin: 0 auto;
+}
+
+input[type="submit"]:hover {
+    background-color: #ff4d4d;
+}
+
+p {
+    margin-bottom: 10px;
+}

@@ -1,0 +1,76 @@
+/* dashboard-styles.css */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f3f6f8;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    background-color: #007bff;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #007bff;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #0056b3;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+}
+
+.sales-charts, .revenue-charts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.sales-charts .chart-container, .revenue-charts .chart-container {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    height: 400px; /* Altura ajustada para una mejor visualización */
+    margin-bottom: 20px;
+}
+
+.chart-title {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    margin-top: 0;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+@media (min-width: 768px) {
+    .sales-charts .chart-container, .revenue-charts .chart-container {
+        width: calc(50% - 20px); /* El 50% del ancho menos el espacio entre los gráficos */
+    }
+}

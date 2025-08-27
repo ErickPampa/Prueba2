@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Arvo&family=Cairo:wght@500&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="assets/img/logo.ico" />
+
+  <!--=============== REMIXICONS ===============-->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+  <!-- ARCHIVOS JS -->
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+  <!--=============== CSS ===============-->
+  <link rel="stylesheet" href="assets/css/estilos.css">
+<script>
+    // Función para incrementar y mostrar el contador de visitas
+    function contarVisitas() {
+      if (typeof(Storage) !== "undefined") {
+        if (localStorage.visitas) {
+          localStorage.visitas = Number(localStorage.visitas) + 1;
+        } else {
+          localStorage.visitas = 1;
+        }
+        document.getElementById("contador-visitas").innerHTML = "Visitas: " + localStorage.visitas;
+      } else {
+        document.getElementById("contador-visitas").innerHTML = "Tu navegador no soporta localStorage.";
+      }
+    }
+    // Llama a la función al cargar la página
+    window.onload = contarVisitas;
+  </script>
+  <script src="//code.tidio.co/cbkucb84zjuhc9wv7qg4ys8thzh8jrpx.js" async></script>
+  <style>
+    a {
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #febf97;
+    }
+
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .contacto {
+      display: flex;
+      background-color: #ffffff;
+      /* Cambia el color de fondo del contenedor de contacto según tus preferencias */
+      margin: 20px;
+      /* Ajusta el margen exterior del contenedor según tus necesidades */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      /* Agrega sombra al contenedor para resaltarlo */
+    }
+
+    .info {
+      width: 50%;
+      /* Ajusta el ancho de la parte de contacto según tus necesidades */
+      padding: 20px;
+      box-sizing: border-box;
+      margin-left: 50px;
+    }
+
+    .mapa {
+      width: 70%;
+      /* Ajusta el ancho del mapa según tus necesidades */
+      margin: 10px;
+    }
+
+    /* Añade estilos adicionales según tus preferencias */
+    h1 {
+      font-size: 2em;
+    }
+
+    p {
+      margin: 0.5em 0;
+    }
+
+    @media only screen and (max-width: 600px) {
+      .contacto {
+        flex-direction: column;
+      }
+
+      .info,
+      .mapa {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+
+
+
+
+    /* Estilos generales del footer para pantallas grandes */
+    .footer-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #333;
+      color: #fff;
+      padding: 40px;
+    }
+
+    .footer-section {
+      flex: 1;
+      text-align: center;
+    }
+
+    .footer-section h2 {
+      font-size: 1.2em;
+      margin-bottom: 15px;
+    }
+
+    .footer-section ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-section ul li {
+      margin-bottom: 10px;
+    }
+
+    .footer-section a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .footer-section a:hover {
+      text-decoration: underline;
+    }
+
+    .divider {
+      border-left: 1px solid #fff;
+      height: 100px;
+    }
+
+    .social-section {
+      text-align: center;
+    }
+
+    .social-icons a {
+      display: inline-block;
+      margin: 10px;
+    }
+
+    .social-icons img {
+      width: 30px;
+      height: 30px;
+      display: block;
+    }
+
+    .redes {
+      display: inline;
+    }
+
+    .footer-section p {
+      margin: 0 60px;
+    }
+
+    .footer-section.derechos {
+      text-align: center;
+      padding: 20px 0;
+      background-color: #000;
+    }
+
+    .footer-section.derechos p {
+      color: #fff;
+      font-size: 14px;
+    }
+
+    /* Media query para dispositivos móviles */
+    @media screen and (max-width: 767px) {
+      .footer-container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .footer-section {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+
+      .divider {
+        display: none;
+      }
+    }
+    
+    #contador-visitas {
+  position: fixed;
+  bottom: 10px; /* Mantén el mismo margen desde abajo */
+  left: 10px; /* Cambia la posición de la derecha a la izquierda */
+  background-color: #333;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+  </style>
+
+  <title>Yanet & Diandra</title>
+</head>
+
+<body>
+  <!--=============== HEADER ===============-->
+  <header class="header">
+    <nav class="nav container">
+      <div class="nav__data">
+        <a href="index.html" class="nav__logo">
+          Yanet & Diandra
+        </a>
+
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="ri-menu-line nav__toggle-menu"></i>
+          <i class="ri-close-line nav__toggle-close"></i>
+        </div>
+      </div>
+
+      <!--=============== NAV MENU ===============-->
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+          <li>
+            <a href="index.html" class="nav__link">Inicio</a>
+          </li>
+
+          <li>
+            <a href="catalog.jsp" class="nav__link">Catalogo</a>
+          </li>
+
+          <li>
+            <a href="nosotros.html" class="nav__link">Sobre Nosotros</a>
+          </li>
+
+          <li>
+            <a href="login.jsp" class="nav__link">Iniciar Sesión</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!--=============== CONTENIDO PRINCIPAL ===============-->
+  <div class="main-content">
+    <div class="column-left">
+      <h1>Yanet & Diandra</h1>
+      <p>¡Encuentra el juguete perfecto para tus pequeños!</p>
+      <button class="css-button-sliding-to-left--black" onclick="redireccionar()">Vamos!</button>
+    </div>
+    <div class="column-right">
+      <div class="image-container">
+        <img id="main-image" src="assets/img/image1.webp" alt="Imagen Principal">
+      </div>
+    </div>
+  </div>
+
+  <!--=============== IMAGENES ===============-->
+
+  <h2 class="subtitle">DECORACIONES PARA BODAS Y CUMPLEAÑOS</h2>
+  <div class="container-img">
+    <div class="box-img">
+      <a href="#" onclick="mostrarImagen('assets/img/decoracion1.webp')">
+        <figure>
+          <img src="assets/img/decoracion1.webp" alt="img-galeria">
+        </figure>
+      </a>
+    </div>
+    <div class="box-img">
+      <a href="#">
+        <figure>
+          <img src="assets/img/decoracion10.webp" alt="img-galeria">
+        </figure>
+      </a>
+    </div>
+    <div class="box-img">
+      <a href="#">
+        <figure>
+          <img src="assets/img/decoracion3.webp" alt="img-galeria">
+        </figure>
+      </a>
+    </div>
+    <div class="box-img">
+      <a href="#">
+        <figure>
+          <img src="assets/img/decoracion4.webp" alt="img-galeria">
+        </figure>
+      </a>
+    </div>
+    <div class="box-img">
+      <a href="#">
+        <figure>
+          <img src="assets/img/decoracion9.webp" alt="img-galeria">
+        </figure>
+      </a>
+    </div>
+    <div class="box-img">
+      <a href="#">
+        <figure>
+          <img src="assets/img/decoracion8.webp" alt="img-galeria">
+        </figure>
+      </a>
+    </div>
+    <div class="box-img">
+      <a href="#">
+        <figure>
+          <img src="assets/img/decoracion7.webp" alt="img-galeria">
+        </figure>
+      </a>
+    </div>
+  </div>
+
+
+  <div class="popup" id="popup">
+    <div class="popup-content">
+      <img id="popup-image" alt="Imagen en grande">
+      <span class="close" onclick="cerrarPopup()">&times;</span>
+    </div>
+  </div>
+
+
+  <!--=============== VIDEO ===============-->
+
+  <section class="video-background">
+    <video autoplay loop muted>
+      <source src="assets/video/video5.mp4" type="video/mp4" />
+    </video>
+    <div class="content">
+      <h4> RESERVA TU JUGUETE PREFERIDO</h4>
+      <br />
+      <a href="catalog.jsp" class="css-button-fully-rounded--black">VAMOS</a>
+    </div>
+  </section> 
+
+
+  <!--=============== FORMULARIO ===============-->
+
+  <div id="contacto" class="contacto">
+    <div class="info">
+      <h1>CONTACTO</h1>
+      <p><strong>Correo:</strong>email@gmail.com</p>
+      <p><strong>Dirección:</strong> Av. Arequipa 321, Lima</p>
+      <p><strong>Teléfono Fijo:</strong> (123) 23123212</p>
+      <p><strong>Celular:</strong> +51 999 999 999</p>
+      <p><strong>Horarios:</strong> Lunes a Viernes, 10:00 AM - 6:00 PM</p>
+    </div>
+    <div class="mapa">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d579.7691631941968!2d-76.97527295532754!3d-12.166340755264248!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105b9b9ab965809%3A0xf2ae0e525350be1b!2sTienda%20moda%20textil!5e0!3m2!1ses-419!2spe!4v1702319141774!5m2!1ses-419!2spe"
+        width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div>
+  </div>
+
+
+  <!--=============== FOOTER ================-->
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h2>Yanet & Diandra</h2>
+        <ul>
+          <li><a href="catalog.jsp">Catálogo</a></li>
+          <li><a href="catalog.jsp">Reservas</a></li>
+          <li><a href="nosotros.html">Sobre Nosotros</a></li>
+        </ul>
+      </div>
+      <div class="divider"></div>
+      <div class="footer-section social-section">
+        <h2>Redes Sociales</h2>
+        <ul class="social-icons">
+          <li class="redes"><a href="https://www.facebook.com" target="_blank"><img src="assets/img/fb.png"
+                alt="Facebook"></a></li>
+          <li class="redes"><a href="https://www.twitter.com" target="_blank"><img src="assets/img/x.png"
+                alt="Twitter"></a></li>
+          <li class="redes"><a href="https://www.instagram.com" target="_blank"><img src="assets/img/ig.png"
+                alt="Instagram"></a></li>
+        </ul>
+      </div>
+      <div class="divider"></div>
+      <div class="footer-section">
+        <h2>Contacto</h2>
+        <p>Para mas información sobre nuestros productos llama de lunes a viernes de 10 a.m. a 7 p.m. al numero 923 954
+          765 o comunicate con nosotros al correo: yanetD@gmail.com</p>
+      </div>
+    </div>
+
+
+    <div class="footer-section derechos">
+      <p>&copy; 2024 Yanet & Diandra. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+<div id="contador-visitas"></div>
+  <!--=============== MAIN JS ===============-->
+  <script src="assets/js/main.js"></script>
+
+ 
+
+<script>
+  // Función para redirigir
+  function redireccionar() {
+      window.location.href = "catalog.jsp";
+  }
+</script>
+
+</body>
+
+</html>
