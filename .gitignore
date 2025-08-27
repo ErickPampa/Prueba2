@@ -1,7 +1,27 @@
+# NetBeans
 /nbproject/private/
 /build/
 /dist/
 /out/
+
+# Maven
+/target/
+
+# Compilados
 *.class
+*.jar
+*.war
+*.ear
+
+# Logs
 *.log
+
+# Videos y multimedia
+*.mp4
+*.avi
+*.mov
+
+# Sistema operativo
 .DS_Store
+Thumbs.db
+EOL
