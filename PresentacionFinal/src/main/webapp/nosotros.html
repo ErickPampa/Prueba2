@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="assets/img/logo.ico" />
+  <!--=============== REMIXICONS ===============-->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+  <!--=============== CSS ===============-->
+  <link rel="stylesheet" href="assets/css/styles-catalogo.css">
+  <title>El Bazar de Alexa - Nosotros</title>
+
+
+
+  <style>
+    .contenedor-imagen {
+      position: relative;
+      width: 100%;
+      max-width: 100%;
+      /* Para que la imagen no sea más grande que su contenedor */
+      z-index: 10;
+      /* Asegura que la imagen esté en la capa inferior */
+      margin-top: 50px;
+    }
+
+    .contenedor-imagen img {
+      width: 100%;
+      height: 300px;
+      /* Esto mantiene la proporción original de la imagen */
+    }
+
+    .contenido-superpuesto {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 5%;
+      /* Espaciado interior en relación al ancho del contenedor */
+      text-align: center;
+      /* Centra el texto horizontalmente */
+      background: rgba(0,
+          0,
+          0,
+          0.7);
+      /* Fondo semitransparente para mayor legibilidad */
+      color: #fff;
+      /* Color de texto */
+      background-size: contain;
+      /* Ajusta el fondo al tamaño del contenedor sin recortar */
+      z-index: 20;
+      height: 300px;
+    }
+
+    .contenido-superpuesto h2 {
+      font-size: 3vw;
+      /* Tamaño del encabezado en relación al ancho de la ventana */
+    }
+
+    .contenido-superpuesto p {
+      margin-top: 2%;
+      /* Espaciado superior en relación al ancho del contenedor */
+      font-size: 2vw;
+      /* Tamaño del texto del párrafo en relación al ancho de la ventana */
+    }
+
+    /****************************************************/
+    .contenedor-dos-columnas {
+      display: flex;
+      flex-wrap: wrap;
+      /* Permite que los elementos se envuelvan en dispositivos móviles */
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .izquierda {
+      flex: 1;
+      /* Ocupa todo el ancho en dispositivos móviles */
+      padding: 20px;
+      text-align: justify;
+      padding: 20px;
+      /* Reduzco el relleno en dispositivos móviles */
+      font-size: 20px;
+    }
+
+    .derecha {
+      flex: 1;
+      /* Ocupa todo el ancho en dispositivos móviles */
+      text-align: center;
+      background-color: transparent;
+      padding: 20px;
+      /* Reduzco el relleno en dispositivos móviles */
+    }
+
+    .derecha img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 4%;
+      /* Aplica bordes redondos */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      /* Agrega sombra */
+    }
+
+    @media (max-width: 768px) {
+
+      .contenedor-imagen {
+        margin-top: 20px;
+      }
+
+      .contenedor-dos-columnas {
+        flex-direction: column;
+        /* Cambia a una disposición de columnas en dispositivos móviles */
+      }
+
+      .izquierda,
+      .derecha {
+        flex: 1;
+        /* Ocupan todo el ancho en dispositivos móviles */
+        padding: 10px;
+        /* Reduzco el relleno en dispositivos móviles */
+      }
+
+      .contenedor-imagen img {
+        width: 100%;
+        height: 150px;
+        /* Esto mantiene la proporción original de la imagen */
+      }
+
+      .contenido-superpuesto {
+        height: 150px;
+      }
+
+    }
+
+    @media (max-width: 767px) {
+      .contenedor-imagen img {
+        width: 100%;
+        height: 80px;
+        /* Esto mantiene la proporción original de la imagen */
+      }
+
+      .contenido-superpuesto {
+        height: 80px;
+      }
+    }
+
+    /*******************************************************/
+
+    .contenedor-tres-columnas {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .columna {
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .contenedor-tres-columnas-secundario {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .contenedor-tres-columnas-secundario .columna {
+      flex: 1;
+    }
+
+    .columna img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .columna h3 {
+      font-size: 18px;
+      margin: 10px 0;
+    }
+
+    .columna p {
+      font-size: 14px;
+      margin: 10px 0;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #febf97;
+    }
+
+    @media (max-width: 768px) {
+      .contenedor-tres-columnas {
+        grid-template-columns: 1fr;
+      }
+
+      .contenedor-tres-columnas-secundario {
+        flex-direction: column;
+      }
+
+      .columna {
+        margin-bottom: 20px;
+      }
+    }
+
+    /* Estilos generales del footer para pantallas grandes */
+    .footer-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #333;
+      color: #fff;
+      padding: 40px;
+    }
+
+    .footer-section {
+      flex: 1;
+      text-align: center;
+    }
+
+    .footer-section h2 {
+      font-size: 1.2em;
+      margin-bottom: 15px;
+    }
+
+    .footer-section ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-section ul li {
+      margin-bottom: 10px;
+    }
+
+    .footer-section a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .footer-section a:hover {
+      text-decoration: underline;
+    }
+
+    .divider {
+      border-left: 1px solid #fff;
+      height: 100px;
+    }
+
+    .social-section {
+      text-align: center;
+    }
+
+    .social-icons a {
+      display: inline-block;
+      margin: 10px;
+    }
+
+    .social-icons img {
+      width: 30px;
+      height: 30px;
+      display: block;
+    }
+
+    .redes {
+      display: inline;
+    }
+
+    .footer-section p {
+      margin: 0 60px;
+    }
+
+    .footer-section.derechos {
+      text-align: center;
+      padding: 20px 0;
+      background-color: #000;
+    }
+
+    .footer-section.derechos p {
+      color: #fff;
+      font-size: 14px;
+    }
+
+    /* Media query para dispositivos móviles */
+    @media screen and (max-width: 767px) {
+      .footer-container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .footer-section {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+
+      .divider {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!--=============== HEADER ===============-->
+  <header class="header">
+    <nav class="nav container">
+      <div class="nav__data">
+        <a href="index.html" class="nav__logo">
+          Yanet & Diandra
+        </a>
+
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="ri-menu-line nav__toggle-menu"></i>
+          <i class="ri-close-line nav__toggle-close"></i>
+        </div>
+      </div>
+
+      <!--=============== NAV MENU ===============-->
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+          <li>
+            <a href="index.html" class="nav__link">Inicio</a>
+          </li>
+
+          <li>
+            <a href="catalog.jsp" class="nav__link">Catalogo</a>
+          </li>
+
+          <li>
+            <a href="nosotros.html" class="nav__link">Sobre Nosotros</a>
+          </li>
+
+          <li>
+            <a href="index.html#contacto" class="nav__link">Contacto</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <div class="contenedor-imagen">
+    <img src="assets/img/image-fondo.webp" alt="Descripción de la imagen" />
+    <div class="contenido-superpuesto">
+      <h2>Sobre Nosotros</h2>
+      <p>
+        No dude en saber más sobre nuestro equipo y nuestra empresa en esta
+        página. Estaremos encantados de ayudarle.
+      </p>
+    </div>
+  </div>
+
+  <div class="contenedor-dos-columnas">
+    <div class="izquierda">
+      <h3>Misión</h3>
+      <br />
+      <p>
+        En "Yanet % Diandra", nos dedicamos a enriquecer los momentos especiales de la vida familiar. Proporcionamos juguetes cuidadosamente seleccionados para el desarrollo infantil y creamos experiencias inolvidables a través de servicios de decoración personalizada. Nuestra misión es ser el destino preferido para familias que buscan alegría, creatividad y momentos memorables en un ambiente acogedor y familiar.
+      </p>
+      <br />
+      <p>
+        A través de nuestro compromiso con la calidad, la creatividad y la atención al cliente, aspiramos a ser más que una tienda; queremos ser un compañero confiable en los momentos especiales de la vida de las familias.
+      </p>
+    </div>
+    <div class="derecha">
+      <img src="assets/img/image-fondo4.avif" alt="Descripción de la imagen" />
+    </div>
+  </div>
+
+  <div class="contenedor-tres-columnas">
+    <div class="columna principal">
+      <h2>Nuestras Virtudes</h2>
+      <p>
+        Nos enfocamos en la comodidad, felicidad y gustos del cliente.
+      </p>
+    </div>
+    <div class="contenedor-tres-columnas-secundario">
+      <div class="columna">
+        <img src="assets/img/image-fondo5.webp" alt="Imagen 1" />
+        <h3>Calidad Excepcional</h3>
+        <p>
+          Nos esforzamos por ofrecer una calidad excepcional en cada uno de nuestros productos y servicios. Seleccionamos cuidadosamente juguetes que no solo entretienen, sino que también contribuyen al desarrollo saludable de los niños. En cuanto a nuestras decoraciones, cada detalle refleja nuestro compromiso con la excelencia, asegurando que cada evento sea una experiencia única y encantadora.
+        </p>
+      </div>
+      <div class="columna">
+        <img src="assets/img/image-fondo8.webp" alt="Imagen 2" />
+        <h3>Atencion Personalizada</h3>
+        <p>
+          Valoramos la conexión personal con nuestros clientes. En nuestra tienda, cada familia es única, y nos esforzamos por comprender sus necesidades individuales. Desde ayudar a elegir el regalo perfecto hasta colaborar estrechamente en la planificación y ejecución de eventos, brindamos atención personalizada que va más allá de las expectativas. Nos enorgullece ser un socio confiable en la creación de momentos especiales y significativos.
+        </p>
+      </div>
+      <div class="columna">
+        <img src="assets/img/image-fondo7.webp" alt="Imagen 3" />
+        <h3>Creatividad Inspiradora</h3>
+        <p>
+          La creatividad es el corazón de nuestra empresa. Ya sea en la selección de juguetes educativos y divertidos o en la creación de decoraciones temáticas, nos esforzamos por inspirar momentos de alegría y asombro. Nuestro equipo está dedicado a pensar fuera de lo común, transformando ideas en realidades que superan las expectativas.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h2>Yanet & Diandra</h2>
+        <ul>
+          <li><a href="catalog.jsp">Catálogo</a></li>
+          <li><a href="catalogo.jsp">Reservar</a></li>
+          <li><a href="nosotros.html">Sobre Nosotros</a></li>
+        </ul>
+      </div>
+      <div class="divider"></div>
+      <div class="footer-section social-section">
+        <h2>Redes Sociales</h2>
+        <ul class="social-icons">
+          <li class="redes"><a href="https://www.facebook.com" target="_blank"><img src="assets/img/fb.png"
+                alt="Facebook"></a></li>
+          <li class="redes"><a href="https://www.twitter.com" target="_blank"><img src="assets/img/x.png"
+                alt="Twitter"></a></li>
+          <li class="redes"><a href="https://www.instagram.com" target="_blank"><img src="assets/img/ig.png"
+                alt="Instagram"></a></li>
+        </ul>
+      </div>
+      <div class="divider"></div>
+      <div class="footer-section">
+        <h2>Contacto</h2>
+        <p>Para mas información sobre nuestros productos llama de lunes a viernes de 10 a.m. a 7 p.m. al numero 923 954
+          765 o comunicate con nosotros al correo: yanetD@gmail.com</p>
+      </div>
+    </div>
+
+
+    <div class="footer-section derechos">
+      <p>&copy; 2024 Yanet % Diandra. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
